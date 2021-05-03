@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import SideBar from "./components/SideBar.vue";
 import Header from "./components/Header.vue";
 import TaskDisplay from "./components/TaskDisplay.vue";
@@ -19,7 +18,6 @@ import TaskDisplay from "./components/TaskDisplay.vue";
 export default {
 	name: "App",
 	components: {
-		HelloWorld,
 		SideBar,
 		Header,
 		TaskDisplay,
@@ -34,12 +32,14 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
+	padding: 0;
+	margin: 0;
 }
 .main-container {
 	position: absolute;
 	width: 100%;
+	margin: -8px;
 	min-height: 100vh;
-	overflow: visible;
 	display: -webkit-flex; /* Safari */
 	display: flex; /* Standard syntax */
 }
@@ -47,6 +47,6 @@ export default {
 	width: 80%;
 	display: flex;
 	flex-direction: column;
-	border: solid orange 0.5rem;
+	/* border: solid orange 0.5rem; */
 }
 </style>

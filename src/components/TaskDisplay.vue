@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 .tasks {
-	border: solid blue 0.5rem;
+	/* border: solid blue 0.5rem; */
 	padding: 10px;
 	background: #dbdfe5;
 	-webkit-flex: 1; /* Safari */
