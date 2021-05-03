@@ -26,12 +26,12 @@ div {
 	display: flex;
 	flex-direction: column;
 }
-h1{
+h1 {
 	flex: 1; /* Standard syntax */
 }
-ol{
-	flex:1;
-	display:flex;
+ol {
+	flex: 1;
+	display: flex;
 	flex-direction: column;
 	border: solid red 0.5rem;
 }

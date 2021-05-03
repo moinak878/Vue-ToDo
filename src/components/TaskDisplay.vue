@@ -26,19 +26,18 @@ export default {
 	-ms-flex: 1; /* IE 10 */
 	flex: 1; /* Standard syntax */
 	margin: 0 0;
-    
 }
-.tasks h1{
-    margin: auto auto;
-    padding : 10px;
+.tasks h1 {
+	margin: auto auto;
+	padding: 10px;
 }
-.tasks button{
-    position: absolute;
-    margin :35% -5%;
-    background: green;
-    height: 50px;
-    width:100px;
-    border-radius: 0.5rem;
-    padding : 0 ;
+.tasks button {
+	position: absolute;
+	margin: 35% -5%;
+	background: green;
+	height: 50px;
+	width: 100px;
+	border-radius: 0.5rem;
+	padding: 0;
 }
 </style>
