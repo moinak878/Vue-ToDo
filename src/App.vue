@@ -24,7 +24,6 @@ export default {
 	},
 };
 </script>
-
 <style>
 #app {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -34,19 +33,22 @@ export default {
 	color: #2c3e50;
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 }
 .main-container {
 	position: absolute;
 	width: 100%;
 	margin: -8px;
-	min-height: 100vh;
+	height: 100vh;
 	display: -webkit-flex; /* Safari */
 	display: flex; /* Standard syntax */
+	overflow: hidden;
 }
 .view {
 	width: 80%;
 	display: flex;
 	flex-direction: column;
-	/* border: solid orange 0.5rem; */
+	/* overflow:hidden;
+	border: solid orange 0.5rem; */
 }
 </style>
