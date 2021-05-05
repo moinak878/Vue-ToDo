@@ -2,10 +2,15 @@
 	<!-- display all tasks here  -->
 	<div class="container">
 		<div class="main-area">
-			<div class="task-card" v-for="task in tasks" v-bind:key="task.id">
-				<img src="../assets/logo.png" />
-				<p>{{ task.msg }}</p>
-			</div>
+			<transition-group name="list-complete" >
+				<div class="task-card" v-for="task in tasks" v-bind:key="task.id">
+					<span class="close" @click="deleteTask(key)">&times;</span>
+
+					<img src="../assets/logo.png" />
+
+					<p>{{ task.msg }}</p>
+				</div>
+			</transition-group>
 		</div>
 	</div>
 </template>
@@ -21,20 +26,32 @@ export default {
 					msg: "This is sample task 1 that i have to complete by 1/1/2021",
 				},
 				{
-					id: 1,
-					msg: "This is sample task 1 that i have to complete by 1/1/2021",
+					id: 2,
+					msg: "This is sample task 1 that i have to complete by 2/1/2021",
 				},
 				{
-					id: 1,
-					msg: "This is sample task 1 that i have to complete by 1/1/2021",
+					id: 3,
+					msg: "This is sample task 1 that i have to complete by 3/1/2021",
 				},
 				{
-					id: 1,
-					msg: "This is sample task 1 that i have to complete by 1/1/2021",
+					id: 4,
+					msg: "This is sample task 1 that i have to complete by 4/1/2021",
 				},
 				{
-					id: 1,
-					msg: "This is sample task 1 that i have to complete by 1/1/2021",
+					id: 5,
+					msg: "This is sample task 1 that i have to complete by 5/1/2021",
+				},
+				{
+					id: 6,
+					msg: "This is sample task 1 that i have to complete by 6/1/2021",
+				},
+				{
+					id: 7,
+					msg: "This is sample task 1 that i have to complete by 7/1/2021",
+				},
+				{
+					id: 8,
+					msg: "This is sample task 1 that i have to complete by 8/1/2021",
 				},
 			],
 		};
@@ -42,6 +59,9 @@ export default {
 	methods: {
 		AddTask: function() {
 			console.log("click me!");
+		},
+		deleteTask(key) {
+			this.tasks.splice(key, 1);
 		},
 	},
 };
@@ -102,6 +122,32 @@ export default {
 	padding: 15px;
 	margin: 30% 30%;
 }
+.close {
+	color: rgb(104, 100, 100);
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+.task-card{
+  transition: all 0.5s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-complete-enter, .list-complete-leave-to
+{
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+
 p {
 	color: whitesmoke;
 }
