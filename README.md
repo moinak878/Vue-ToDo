@@ -1,4 +1,9 @@
-# todo
+# todo app using VueJs and firebase
+
+## TODO
+1. Add delete fb
+2. Connect db
+3. Add task button
 
 ## Project setup
 ```
